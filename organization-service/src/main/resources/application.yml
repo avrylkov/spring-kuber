@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: organization-service
+
+server:
+  port: 8095
+
+contract-service:
+  ribbon:
+    eureka:
+      enabled: false
+    client:
+      enabled: true
+    listOfServers: localhost:8085
+    ServerListRefreshInterval: 5000
