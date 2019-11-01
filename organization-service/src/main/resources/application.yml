@@ -11,5 +11,5 @@ contract-service:
       enabled: false
     client:
       enabled: true
-    listOfServers: localhost:8085
+    listOfServers: contract-service:8085
     ServerListRefreshInterval: 5000
