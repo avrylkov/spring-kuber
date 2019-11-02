@@ -8,7 +8,7 @@
 
 Схема сервисов и взаимодействия
 
-![example](./images/Spring Qubernetes.png)
+![example](images/SpringQubernetes.png)
 
 Два сервиса organization-service и contract-service. Каждый из сервисов имеют по REST контролеру, репозиторию данных и модель данных. organization-service еще имеет bean конфигурации. 
 Пример organization-service
