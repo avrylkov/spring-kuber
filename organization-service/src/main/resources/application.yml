@@ -5,6 +5,15 @@ spring:
 server:
   port: 8095
 
+management:
+  endpoint:
+    restart:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
+# interservice interaction
 contract-service:
   ribbon:
     eureka:

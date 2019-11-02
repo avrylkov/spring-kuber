@@ -21,7 +21,8 @@ public class OrganizationApplication {
 	@Bean
 	OrganizationRepository repository() {
 		OrganizationRepository repository = new OrganizationRepository();
-		repository.add(new Organization(1L, "Development", "123333"));
+		repository.add(new Organization(100L, "Development", "123333"));
+		repository.add(new Organization(101L, "Education", "34555555"));
 		return repository;
 	}
 

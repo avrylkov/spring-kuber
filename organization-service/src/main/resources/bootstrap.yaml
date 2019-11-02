@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: organization-service
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        mode: polling
+        period: 5000
+      secrets:
+        paths: /etc/secrets/organization-service
+      config:
+        sources:
+          - name: other
+          - name: ${spring.application.name}

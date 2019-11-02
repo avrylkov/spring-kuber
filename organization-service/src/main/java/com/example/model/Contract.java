@@ -6,14 +6,15 @@ public class Contract {
 
     private Long id;
     private String number;
-    private Organization organization;
+    private Long organization;
     private Date createDate;
+    private String currentUser;
 
     public Contract() {
 
     }
 
-    public Contract(Long id, String number, Organization organization, Date createDate) {
+    public Contract(Long id, String number, Long organization, Date createDate) {
         super();
         this.id = id;
         this.number = number;
@@ -33,11 +34,19 @@ public class Contract {
         return number;
     }
 
-    public Organization getOrganization() {
+    public Long getOrganization() {
         return organization;
     }
 
     public Date getCreateDate() {
         return createDate;
+    }
+
+    public String getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(String currentUser) {
+        this.currentUser = currentUser;
     }
 }
