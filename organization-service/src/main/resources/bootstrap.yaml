@@ -7,9 +7,25 @@ spring:
         enabled: true
         mode: polling
         period: 5000
+      config:
+        enabled: true
+        # default-name
+        #name: organization-service-1
+        # default-namespace
+        #namespace: myproject-1
+        sources:
+          # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace myproject
+          - namespace: myproject-2
+            name: organization-service-2
+          # Spring Cloud Kubernetes looks up a ConfigMap named organization-service in whatever namespace n2
+          - namespace: myproject-3
+            name: organization-service-3
+          # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
+          - namespace: myproject
+            name: organization-service-0
       secrets:
         paths: /etc/secrets/organization-service
-      config:
-        sources:
-          - name: other
-          - name: ${spring.application.name}
+#      config:
+#        sources:
+#          - name: other
+#          - name: ${spring.application.name}

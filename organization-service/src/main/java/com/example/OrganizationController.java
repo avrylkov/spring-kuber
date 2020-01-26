@@ -54,4 +54,17 @@ public class OrganizationController {
         return organizationConfig.getPincode();
     }
 
+    @GetMapping("/user")
+    public String getuser() {
+        LOGGER.info("get User");
+        return organizationConfig.getUsername();
+    }
+
+    @GetMapping("/message")
+    public String ge() {
+        LOGGER.info("get Message");
+        return organizationConfig.getMessage();
+    }
+
+
 }

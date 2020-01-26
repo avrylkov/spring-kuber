@@ -8,7 +8,11 @@ spec:
             # The secret must be created before deploying this application
             secretName: "organization-service"
       containers:
-        -
+        - env:
+            #SPRING_PROFILES_ACTIVE
+          - name: ENV0
+            value: "development"
+            #"development" "production"
           volumeMounts:
             - name: "organization-service"
               readOnly: true
@@ -16,12 +20,12 @@ spec:
               # see src/main/resources/bootstrap.yml
               mountPath: "/etc/secrets/organization-service"
           resources:
-#           requests:
-#             cpu: "0.2"
-#             memory: 256Mi
-#           limits:
-#             cpu: "1.0"
-#             memory: 256Mi
+            requests:
+              cpu: "0.5"
+              memory: 500Mi
+            limits:
+              cpu: "1.0"
+              memory: 2048Mi
 #          env:
 #          - name: SPRING_APPLICATION_JSON
 #            value: '{"server":{"undertow":{"io-threads":1, "worker-threads":2 }}}'

@@ -1,10 +1,8 @@
 spring:
   application:
     name: organization-service
-
 server:
   port: 8095
-
 management:
   endpoint:
     restart:

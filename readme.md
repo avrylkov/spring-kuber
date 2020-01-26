@@ -63,6 +63,7 @@ http://contract-myproject3.apps.ca-central-1.starter.openshift-online.com/
 [{"id":1,"number":"N 001","organization":100,"createDate":"2019-11-02T14:38:30.751+0000","currentUser":"Alexander"},{"id":2,"number":"N 111","organization":100,
 "createDate":"2019-11-02T14:38:30.751+0000","currentUser":"Alexander"}]
 `
+**ConfigMap**
 
 Здесь поле currentUser будет заполнено из ConfigMap
 
@@ -73,3 +74,7 @@ http://contract-myproject3.apps.ca-central-1.starter.openshift-online.com/
 `oc create -f secret.yml`
 
 `oc edit configmap organization-service`
+
+**Maven**
+
+`mvn clean package fabric8:deploy -Pkubernetes`

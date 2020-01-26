@@ -9,6 +9,7 @@ public class OrganizationConfig {
 
     // Config Maps
     private String username = "user";
+    private String message = "?";
     // Secrets
     private String pincode;
 
@@ -26,5 +27,13 @@ public class OrganizationConfig {
 
     public void setPincode(String pincode) {
         this.pincode = pincode;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
