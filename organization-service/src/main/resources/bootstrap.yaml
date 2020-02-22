@@ -13,18 +13,19 @@ spring:
         #name: organization-service-1
         # default-namespace
         #namespace: myproject-1
-        sources:
+        #sources:
           # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace myproject
-          - namespace: myproject-2
-            name: organization-service-2
+          #- namespace: myproject-2
+          #  name: organization-service-2
           # Spring Cloud Kubernetes looks up a ConfigMap named organization-service in whatever namespace n2
-          - namespace: myproject-3
-            name: organization-service-3
+          #- namespace: myproject-3
+          #  name: organization-service-3
           # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
-          - namespace: myproject
-            name: organization-service-0
+          #- namespace: myproject
+          #  name: organization-service-0
+        paths: /etc/config/organization-service/application.yml,/etc/config/organization-service/profile
       secrets:
-        paths: /etc/secrets/organization-service
+        paths: /etc/secrets/organization-service/organization.pincode
 #      config:
 #        sources:
 #          - name: other

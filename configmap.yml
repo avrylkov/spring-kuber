@@ -1,7 +1,6 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  # Must match the 'spring.application.name' property of the application
   name: organization-service
 data:
   application.yml: |-
@@ -18,3 +17,4 @@ data:
       profiles: production
     organization:
       message: Say Hello to the Production
+  profile: development

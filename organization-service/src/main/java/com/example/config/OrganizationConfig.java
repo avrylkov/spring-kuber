@@ -36,4 +36,9 @@ public class OrganizationConfig {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    public String getConfig() {
+        return String.format("user %s, message %s, pincode %s", getUsername(), getMessage(), getPincode());
+    }
+
 }

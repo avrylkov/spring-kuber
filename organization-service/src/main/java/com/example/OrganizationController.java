@@ -66,5 +66,10 @@ public class OrganizationController {
         return organizationConfig.getMessage();
     }
 
+    @GetMapping("/config")
+    public String geConfig() {
+        LOGGER.info("get config");
+        return organizationConfig.getConfig();
+    }
 
 }

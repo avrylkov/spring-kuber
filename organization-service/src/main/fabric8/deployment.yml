@@ -3,22 +3,27 @@ spec:
     spec:
       serviceAccountName: "qs-organization-service"
       volumes:
-        - name: "organization-service"
+        - name: "app-secret"
           secret:
-            # The secret must be created before deploying this application
             secretName: "organization-service"
+        - name: "app-config"
+          configMap:
+            name: "organization-service"
       containers:
         - env:
-            #SPRING_PROFILES_ACTIVE
-          - name: ENV0
-            value: "development"
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: organization-service
+                  key: profile
             #"development" "production"
           volumeMounts:
-            - name: "organization-service"
+            - name: "app-secret"
               readOnly: true
-              # Mount the secret where spring-cloud-kubernetes is configured to read it
-              # see src/main/resources/bootstrap.yml
               mountPath: "/etc/secrets/organization-service"
+            - name: "app-config"
+              readOnly: true
+              mountPath: "/etc/config/organization-service"
           resources:
             requests:
               cpu: "0.5"
