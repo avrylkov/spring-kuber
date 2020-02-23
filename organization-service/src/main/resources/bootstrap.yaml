@@ -3,12 +3,12 @@ spring:
     name: organization-service
   cloud:
     kubernetes:
-      reload:
-        enabled: true
-        mode: polling
-        period: 5000
+#      reload:
+#        enabled: true
+#        mode: polling
+#        period: 5000
       config:
-        enabled: true
+        #enabled: true
         # default-name
         #name: organization-service-1
         # default-namespace

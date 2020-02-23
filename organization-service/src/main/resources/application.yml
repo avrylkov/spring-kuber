@@ -1,22 +1,21 @@
 spring:
   application:
     name: organization-service
-server:
-  port: 8095
-management:
-  endpoint:
-    restart:
-      enabled: true
-    health:
-      enabled: true
-    info:
-      enabled: true
-# interservice interaction
-contract-service:
-  ribbon:
-    eureka:
-      enabled: false
-    client:
-      enabled: true
-    listOfServers: contract-service:8085
-    ServerListRefreshInterval: 5000
+#server:
+#  port: 8080
+#management:
+#  endpoint:
+#    restart:
+#      enabled: true
+#    health:
+#      enabled: true
+#    info:
+#      enabled: true
+#contract-service:
+#  ribbon:
+#    eureka:
+#      enabled: false
+#    client:
+#      enabled: true
+#    listOfServers: contract-service:8085
+#    ServerListRefreshInterval: 5000
